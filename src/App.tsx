@@ -1,4 +1,4 @@
-import { GitHubBanner, Refine, WelcomePage } from "@refinedev/core";
+import {  Refine} from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
@@ -11,13 +11,14 @@ import "./App.css";
 import { Toaster } from "./components/refine-ui/notification/toaster";
 import { useNotificationProvider } from "./components/refine-ui/notification/use-notification-provider";
 import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
-import { dataProvider } from "./providers/data";
+// import { dataProvider } from "./providers/data";
 import Dashboard from "@/pages/dashboard.tsx";
 import {Layout} from "@/components/refine-ui/layout/layout.tsx";
 import {BookOpen, LucideHome} from "lucide-react";
 
 import SubjectsList from "@/pages/subjects/list.tsx";
 import SubjectsCreate from "@/pages/subjects/create.tsx";
+import {dataProvider} from "@/providers/data.ts";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
               resources={[
                   {
                      name: 'dashboard',
-                     list:'/,' ,
+                     list:'/' ,
                       meta:{label:"Home",icon:<LucideHome/>}
                   },
                   {
