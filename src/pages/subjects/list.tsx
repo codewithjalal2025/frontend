@@ -21,7 +21,7 @@ const SubjectsList = () => {
     ];
 
     const searchFilters=searchQuery?[
-        {field:"name",operator:'contains' as const ,value:"searchQuery"},
+        {field:"name",operator:'contains' as const ,value:searchQuery},
     ]:[];
 
 
