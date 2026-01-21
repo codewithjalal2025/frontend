@@ -1,9 +1,9 @@
 
-import {BaseRecord, DataProvider, GetListResponse} from "@refinedev/core";
+import {BaseRecord, DataProvider, GetListParams, GetListResponse} from "@refinedev/core";
 import {MOCK_SUBJECTS} from "@/constants/mock-data.ts";
 
 export const dataProvider:DataProvider={
-  getList:async <TData extends BaseRecord=BaseRecord>({resource}:GelListParams):Promise<GetListResponse<TData>> =>{
+  getList:async <TData extends BaseRecord=BaseRecord>({resource}:GetListParams):Promise<GetListResponse<TData>> =>{
 
     if(resource !== 'subjects' ) return {data:[] as TData[], total:0};
 
