@@ -103,21 +103,21 @@ const SubjectsList = () => {
                         >
                             <SelectTrigger>
                                 <SelectValue placeholder="Filter by department..." />
-                                <SelectContent>
-                                    <SelectItem value="all" >
-                                        All Departments
-                                    </SelectItem>
-                                    {
-                                    DEPARTMENT_OPTIONS.map((department)=>(
-                                        <SelectItem value={department.value} key={department.value}>
-                                            {department.label}
-
-                                        </SelectItem>
-                                    ))
-                                    }
-
-                                </SelectContent>
                             </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="all" >
+                                    All Departments
+                                </SelectItem>
+                                {
+                                DEPARTMENT_OPTIONS.map((department)=>(
+                                    <SelectItem value={department.value} key={department.value}>
+                                        {department.label}
+
+                                    </SelectItem>
+                                ))
+                                }
+
+                            </SelectContent>
 
                         </Select>
 
