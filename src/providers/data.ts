@@ -13,10 +13,10 @@ export const dataProvider:DataProvider={
     }
   },
 
-  getOne:async ()=> { throw new Error("This Function is not prosent in mock")},
-  create:async ()=> { throw new Error("This Function is not prosent in mock")},
-  update:async ()=> { throw new Error("This Function is not prosent in mock")},
-  deleteOne:async ()=> { throw new Error("This Function is not prosent in mock")},
+  getOne:async ()=> { throw new Error("This function is not implemented in mock")},
+  create:async ()=> { throw new Error("This function is not implemented in mock")},
+  update:async ()=> { throw new Error("This function is not implemented in mock")},
+  deleteOne:async ()=> { throw new Error("This function is not implemented in mock")},
 getApiUrl:()=>'',
 
 }
