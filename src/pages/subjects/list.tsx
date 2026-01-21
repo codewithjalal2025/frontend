@@ -21,7 +21,7 @@ const SubjectsList = () => {
     ];
 
     const searchFilters=searchQuery?[
-        {field:"name",operator:'contains' as const ,value:"searchQuery"},
+        {field:"name",operator:'contains' as const ,value:searchQuery},
     ]:[];
 
 
@@ -103,6 +103,7 @@ const SubjectsList = () => {
                         >
                             <SelectTrigger>
                                 <SelectValue placeholder="Filter by department..." />
+                            </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="all" >
                                         All Departments
@@ -117,7 +118,7 @@ const SubjectsList = () => {
                                     }
 
                                 </SelectContent>
-                            </SelectTrigger>
+
 
                         </Select>
 

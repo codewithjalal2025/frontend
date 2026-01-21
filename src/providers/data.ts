@@ -1,9 +1,9 @@
 
-import {BaseRecord, DataProvider, GetListResponse} from "@refinedev/core";
+import {BaseRecord, DataProvider, GetListParams, GetListResponse} from "@refinedev/core";
 import {MOCK_SUBJECTS} from "@/constants/mock-data.ts";
 
 export const dataProvider:DataProvider={
-  getList:async <TData extends BaseRecord=BaseRecord>({resource}:GelListParams):Promise<GetListResponse<TData>> =>{
+  getList:async <TData extends BaseRecord=BaseRecord>({resource}:GetListParams):Promise<GetListResponse<TData>> =>{
 
     if(resource !== 'subjects' ) return {data:[] as TData[], total:0};
 
@@ -13,10 +13,10 @@ export const dataProvider:DataProvider={
     }
   },
 
-  getOne:async ()=> { throw new Error("This Function is not prosent in mock")},
-  create:async ()=> { throw new Error("This Function is not prosent in mock")},
-  update:async ()=> { throw new Error("This Function is not prosent in mock")},
-  deleteOne:async ()=> { throw new Error("This Function is not prosent in mock")},
+  getOne:async ()=> { throw new Error("This Function is not present in mock")},
+  create:async ()=> { throw new Error("This Function is not present in mock")},
+  update:async ()=> { throw new Error("This Function is not present in mock")},
+  deleteOne:async ()=> { throw new Error("This Function is not present in mock")},
 getApiUrl:()=>'',
 
 }
