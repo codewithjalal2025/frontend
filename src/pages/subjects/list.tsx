@@ -1,6 +1,6 @@
 import React, {useMemo, useState} from 'react'
-import {ListView} from "@/components/refine-ui/views/list-view.tsx";
-import {Breadcrumb} from "@/components/refine-ui/layout/breadcrumb.tsx";
+import {ListView} from "@/components/refine-ui/views/list-view";
+import {Breadcrumb} from "@/components/refine-ui/layout/breadcrumb";
 import {Search} from "lucide-react";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
 import {CreateButton} from "@/components/refine-ui/buttons/create.tsx";
@@ -43,7 +43,7 @@ const SubjectsList = () => {
             },
             {
                 id:"department",
-                accessorKey:"department",
+                accessorKey:'department.name',
                 size:100,
                 header:()=> <p className="column-title">Department</p>,
                 cell:({getValue})=> <Badge variant="secondary">{getValue<string>()}</Badge>
